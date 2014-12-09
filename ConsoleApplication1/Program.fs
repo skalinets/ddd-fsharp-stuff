@@ -23,9 +23,16 @@ let main argv =
       <| flip findInUserStore userStore
       <| flip saveInUserstore userStore
   
+  let showLogins = function
+    | UserLogged (e, d) -> printfn "user %A logged at %A" e d
+    | _ -> ()
+
+  subscribe system <| showLogins |> ignore
   subscribe system <| printfn "User event: %A" |> ignore
 
-  let userActor = spawn system "users" <| actsAs (userHandler >=> (publish system.EventStream) >> handleErrors)
+  let userActor = 
+    spawn system "users" 
+     <| actsAs (userHandler >=> (publish system.EventStream) >> handleErrors)
 
   userActor <! RegisterUser ("foo", "p")
   userActor <! RegisterUser ("foo", "p")
