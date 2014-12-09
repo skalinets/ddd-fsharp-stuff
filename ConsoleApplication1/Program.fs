@@ -3,7 +3,7 @@
 
 open DDDFsharpSample.Types
 open DDDFsharpSample
-open Akka.Fsharp
+open Akka.FSharp
 
 [<EntryPoint>]
 let main argv = 
@@ -28,5 +28,14 @@ let main argv =
 
   userActor <! RegisterUser ("foo", "p")
   userActor <! RegisterUser ("foo", "p")
+
+  System.Threading.Thread.Sleep 100
+
+  userActor <! LoginUser ("foo", "p")
+  userActor <! LoginUser ("foo", "wrong pass")
+  userActor <! LoginUser ("foo1", "p")
+
+  System.Threading.Thread.Sleep 100
+
 
   0 // return an integer exit code

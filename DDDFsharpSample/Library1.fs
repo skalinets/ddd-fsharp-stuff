@@ -17,7 +17,7 @@ module Types =
 
   type UserCommand = 
     | RegisterUser of email : Email * password : string
-    | LoginUser of email : Email * password : string * remember : bool
+    | LoginUser of email : Email * password : string 
 
   type UserEvent =
     | UserRegistered of email : Email * salt : byte array * phash : byte array * timestamp : DateTime
@@ -71,7 +71,7 @@ module Types =
         saveUser user
         Ok (UserRegistered(email, salt, phash, clock()))
 
-    | LoginUser (email, password, remember) ->
+    | LoginUser (email, password) ->
       match findUser email with
       | None -> Error (UserNotFound email)
       | Some user ->
