@@ -1,0 +1,22 @@
+NUGET
+  remote: C:\Users\Serhiy\AppData\Local\NuGet\Cache
+  specs:
+    Akka (0.7.0)
+      Newtonsoft.Json (>= 6.0.1)
+    FsUnit (1.3.0.1)
+      NUnit (>= 2.6.3)
+    Newtonsoft.Json (6.0.6)
+    NUnit (2.6.3)
+    Paket (0.17.19)
+    Unquote (2.2.2)
+  remote: https://www.nuget.org/api/v2
+  specs:
+    Akka.FSharp (0.7.0)
+      Akka (>= 0.7.0)
+      FSPowerPack.Core.Community (>= 3.0.0.0)
+      FSPowerPack.Linq.Community (>= 3.0.0.0)
+      FsPickler (>= 0.9.11)
+    FsPickler (1.0.6)
+    FSPowerPack.Core.Community (3.0.0.0)
+    FSPowerPack.Linq.Community (3.0.0.0)
+      FSPowerPack.Core.Community (>= 0)
