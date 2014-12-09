@@ -23,7 +23,8 @@ let main argv =
       <| flip findInUserStore userStore
       <| flip saveInUserstore userStore
   
-  let subscriber = subscribe system <| printfn "User event: %A"
+  subscribe system <| printfn "User event: %A" |> ignore
+
   let userActor = spawn system "users" <| actsAs (userHandler >=> (publish system.EventStream) >> handleErrors)
 
   userActor <! RegisterUser ("foo", "p")
