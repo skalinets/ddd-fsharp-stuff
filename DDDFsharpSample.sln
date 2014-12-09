@@ -2,13 +2,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{0A83E402-544A-466C-862D-9014E661C333}"
-	ProjectSection(SolutionItems) = preProject
-		paket.dependencies = paket.dependencies
-		paket.lock = paket.lock
-	EndProjectSection
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "DDDFsharpSample", ".\DDDFsharpSample\DDDFsharpSample.fsproj", "{8F50E8E4-2CE4-49F6-884C-FA4F18C261D7}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "DDDFsharpSample", "DDDFsharpSample.fsproj", "{8F50E8E4-2CE4-49F6-884C-FA4F18C261D7}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ConsoleApplication1", ".\ConsoleApplication1\ConsoleApplication1.fsproj", "{9E5DF3CC-AE28-49F1-A219-2A5A20344888}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{A0F027C0-BEE2-4FCE-8CFF-F4076799D448}"
+	ProjectSection(SolutionItems) = preProject
+		.\paket.dependencies = .\paket.dependencies
+		.\paket.lock = .\paket.lock
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{8F50E8E4-2CE4-49F6-884C-FA4F18C261D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F50E8E4-2CE4-49F6-884C-FA4F18C261D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F50E8E4-2CE4-49F6-884C-FA4F18C261D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E5DF3CC-AE28-49F1-A219-2A5A20344888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5DF3CC-AE28-49F1-A219-2A5A20344888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5DF3CC-AE28-49F1-A219-2A5A20344888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5DF3CC-AE28-49F1-A219-2A5A20344888}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
